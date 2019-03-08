@@ -7,6 +7,7 @@ def prime?(int)
     check = [2,3,5,7,9,11,13]
     for i in check
       int % i == 0 ? false : break
+    end
   else
     return true
   end
