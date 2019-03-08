@@ -1,6 +1,8 @@
 def prime?(int)
   dividers = [2,3,5,7,9,11,13]
-  dividers.each do |x|
-    int % x == 0 ? false : true
+  i = 0
+  while i < dividers.size
+    int % dividers[i] == 0 ? false : i++
   end
+  true
 end
