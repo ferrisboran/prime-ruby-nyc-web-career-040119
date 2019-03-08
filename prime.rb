@@ -4,5 +4,5 @@ def prime?(int)
   while i < dividers.size
     int % dividers[i] == 0 ? false : i++
   end
-  true
+  return true
 end
