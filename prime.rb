@@ -1,7 +1,7 @@
 def prime?(int)
   check = [2,3]
   x = 4
-  while check.size < 20
+  while check.size < 200
   	check.each do |i|
   		if x % i == 0
   			x += 1
