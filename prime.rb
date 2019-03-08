@@ -1,6 +1,6 @@
 def prime?(int)
   check = [2,3]
-  x = 5
+  x = 4
   while check.size < 20
   	check.each do |i|
   		if x % i == 0
@@ -16,8 +16,10 @@ def prime?(int)
   elsif int <= 1
     return false
   elsif
-    for i in check
-      int % i == 0 ? false : break
+    check.each do |prm|
+      if int % prm == 0
+        return false
+      end
     end
   else
     return true
