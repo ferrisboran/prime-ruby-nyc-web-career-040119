@@ -10,7 +10,7 @@ def prime?(int)
   	check << x
   	x += 1
   end
-  
+
   if check.include?(int)
     return true
   elsif int <= 1
