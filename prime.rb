@@ -1,29 +1,28 @@
 def prime?(int)
-  check = [2,3]
-  x = 4
-  while check.size < 200
-  	check.each do |i|
-  		if x % i == 0
-  			x += 1
-  		end
-  	end
-  	check << x
-  	x += 1
+
+  if int < 2 || int % 2 == 0 || int % 3 == 0
+    return false
+  elsif int == 2 || int == 3
+    return true
   end
 
-  if check.include?(int)
-    return true
-  elsif int <= 1
-    return false
-  elsif
-    check.each do |prm|
-      if int % prm == 0
-        return false
-      end
-    end
-  else
-    return true
+  (2..int - 1).each do |i|
+    if int % i == 0
+      return false
   end
+  return true
 end
 
-# x=4 and if x % any current element in check = 0 then x++ otherwise push to check. keep doing that until check's length is 20ish
+=begin
+primes = [2,3]
+x = 5
+while primes.size < 20
+  primes.each do |i|
+    if x % i == 0
+      x += 1
+    end
+  end
+  primes << x
+  x += 1
+end
+=end
